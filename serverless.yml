@@ -1,0 +1,58 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: kangaroo-court
+
+provider:
+  name: aws
+  runtime: python3.8
+  stage: prod
+  region: us-east-2
+
+functions:
+  kangaroo_court:
+    handler: wsgi_handler.handler
+    package:
+      artifact:
+    events:
+      - schedule: rate(5 minutes)
+      - http:
+          path: kangaroo_court
+          method: post
+      - http:
+          path: submit
+          method: post
+      - http:
+          path: judgement_day
+          method: post
+      - http:
+          path: mycomplaints
+          method: post
+
+          
+plugins:
+  - serverless-wsgi
+  - serverless-python-requirements
+
+
+custom:
+  wsgi:
+    app: kangaroo_court.app
+    pythonBin: python3 # Some systems with Python3 may require this
+    packRequirements: false
+  pythonRequirements:
+    dockerizePip: true
+    useDownloadCache: false
+
+
+
