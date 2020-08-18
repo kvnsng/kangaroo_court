@@ -159,7 +159,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/kangaroo-court/prod/1597755414124-2020-08-18T12:56:54.124Z/kangaroo-court.zip"
+                "S3Key": "serverless/kangaroo-court/prod/1597757583433-2020-08-18T13:33:03.433Z/kangaroo-court.zip"
               },
               "FunctionName": "kangaroo-court-prod-kangaroo_court",
               "Handler": "wsgi_handler.handler",
@@ -177,14 +177,14 @@
               "KangarooUnderscorecourtLogGroup"
             ]
           },
-          "KangarooUnderscorecourtLambdaVersionh3gQwcoeiswFBF1pSbTmt6TuczcQ4KwcBreDYnBc": {
+          "KangarooUnderscorecourtLambdaVersiond24zqS0316ZKink9ZTkGfpezxNypV9Kk8jwSrV0T4U": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "KangarooUnderscorecourtLambdaFunction"
               },
-              "CodeSha256": "AXE9Za384Ivd+kjPgEU9Modt2srfYE13+T0NPppNelY="
+              "CodeSha256": "nEJVq8bVoEsUfIe/WXhD3wwb5N8u2i31CztnTjPniAQ="
             }
           },
           "KangarooUnderscorecourtEventsRuleSchedule1": {
@@ -468,7 +468,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1597755371148": {
+          "ApiGatewayDeployment1597757540557": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -530,7 +530,7 @@
           "KangarooUnderscorecourtLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "KangarooUnderscorecourtLambdaVersionh3gQwcoeiswFBF1pSbTmt6TuczcQ4KwcBreDYnBc"
+              "Ref": "KangarooUnderscorecourtLambdaVersiond24zqS0316ZKink9ZTkGfpezxNypV9Kk8jwSrV0T4U"
             }
           },
           "ServiceEndpoint": {
@@ -687,7 +687,7 @@
         "timeout": 6,
         "runtime": "python3.8",
         "vpc": {},
-        "versionLogicalId": "KangarooUnderscorecourtLambdaVersionh3gQwcoeiswFBF1pSbTmt6TuczcQ4KwcBreDYnBc"
+        "versionLogicalId": "KangarooUnderscorecourtLambdaVersiond24zqS0316ZKink9ZTkGfpezxNypV9Kk8jwSrV0T4U"
       }
     },
     "configValidationMode": "warn",
@@ -717,7 +717,7 @@
         ],
         "exclude": [],
         "artifact": "/home/ubuntu/kangaroo_court/.serverless/kangaroo-court.zip",
-        "artifactDirectoryName": "serverless/kangaroo-court/prod/1597755414124-2020-08-18T12:56:54.124Z"
+        "artifactDirectoryName": "serverless/kangaroo-court/prod/1597757583433-2020-08-18T13:33:03.433Z"
       },
       "layers": {
         "$ref": "$[\"service\"][\"layers\"]"
@@ -728,7 +728,7 @@
     "artifact": "/home/ubuntu/kangaroo_court/.serverless/kangaroo-court.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/kangaroo-court/prod/1597755414124-2020-08-18T12:56:54.124Z",
+    "artifactDirectoryName": "serverless/kangaroo-court/prod/1597757583433-2020-08-18T13:33:03.433Z",
     "artifact": "kangaroo-court.zip"
   }
 }
