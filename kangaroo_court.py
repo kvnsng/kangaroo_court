@@ -372,8 +372,8 @@ def my_complaints():
     userID = request.form['user_id']
     
     dynamodb = boto3.resource('dynamodb',
-                              aws_access_key_id='AKIATRTIIVXVQILIOKAS',
-                              aws_secret_access_key='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', 
+                              aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],
+                              aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'], 
                               region_name='us-east-2',
                               use_ssl=False)
     
